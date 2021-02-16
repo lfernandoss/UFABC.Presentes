@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\UFABC.ES.Presentes.Entity\UFABC.ES.Presentes.Entity.csproj" />
+    <ProjectReference Include="..\UFABC.ES.Presentes.Repository\UFABC.ES.Presentes.Repository.csproj" />
+  </ItemGroup>
+
+</Project>
