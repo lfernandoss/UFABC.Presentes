@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap" rel="stylesheet');
+
+.primeiraPagina{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.primeiraPagina .area1{
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.primeiraPagina .area2{
+    flex: 1;
+}
+.primeiraPagina .area1 h1, h2{
+    display: flex;
+    color: white;
+    font-size: 70px;
+    font-family: Tangerine;
+    font-weight: 700;
+    justify-content: center;   
+    align-items: center; 
+}
+.primeiraPagina .area1 h2{
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 55px;
+}
+.primeiraPagina .area1 button{
+    font-family: Tangerine;
+    font-weight: bold;
+    font-size: 30px;
+    margin-top: 35px;
+    margin-right: 10px;
+    
+}
+.primeiraPagina .area1 button:first-child{
+    margin-top: 2px;
+    margin-left: 45px;
+}
+
+
+
+/*questionario*/
+.questionario{
+    position:fixed;
+    left:0;
+    top:0;
+    bottom:0;
+    right:0;
+    background-color:rgba(255, 255, 255, 0.2);
+    display:none;
+    justify-content: center;
+    align-items: center;
+    overflow-y:auto; 
+}
+.titulo_formulario{
+    font-family: Tangerine;
+    margin: 10px;
+    font-size: 40px;
+    color: black;
+    margin-top: 10px;
+    font-weight: bold;
+}
+.perguntas form{
+    padding: 10px;
+    padding-left: 20px;
+    height: 80vh;
+    width: 80vh;
+    background-color: cornsilk;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-radius: 4px;
+}
+.Pss{
+    font-family: Tangerine;
+    font-size: 18px;
+}
+
+.Pss h3{
+    font-size: 22px;
+    margin-bottom: 6px;
+    margin-top: 8px;
+    font-weight: bold;
+}
+.Pss input{
+    margin-right: 40px;
+}
+.Pss button{
+    margin-top: 40px;
+    margin-right: 40px;
+}
