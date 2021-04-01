@@ -18,7 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="Views\Home - Cópia\index.cshtml" />
+    <None Include="Views\Home - Cópdebug .ia\index.cshtml" />
     <None Include="Views\Home\index.cshtml" />
   </ItemGroup>
 
