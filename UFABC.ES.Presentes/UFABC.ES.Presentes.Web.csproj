@@ -6,9 +6,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Views\Home - Cópdebug .ia\**" />
     <Compile Remove="Views\NovaPasta\**" />
+    <Content Remove="Views\Home - Cópdebug .ia\**" />
     <Content Remove="Views\NovaPasta\**" />
+    <EmbeddedResource Remove="Views\Home - Cópdebug .ia\**" />
     <EmbeddedResource Remove="Views\NovaPasta\**" />
+    <None Remove="Views\Home - Cópdebug .ia\**" />
     <None Remove="Views\NovaPasta\**" />
   </ItemGroup>
 
@@ -18,12 +22,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="Views\Home - Cópdebug .ia\index.cshtml" />
     <None Include="Views\Home\index.cshtml" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="5.0.3" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="RestSharp" Version="106.11.7" />
   </ItemGroup>
 
   <ItemGroup>
