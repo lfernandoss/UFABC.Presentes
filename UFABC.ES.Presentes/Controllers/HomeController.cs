@@ -27,8 +27,7 @@ namespace UFABC.ES.Presentes.Controllers
         public class CadastroDTO
         {
             public int id { get; set; }
-            public string nomePresenteador { get; set; }
-            public string nomePresenteada { get; set; }
+            
             public string tipoPresenteado { get; set; }
             public string relacao { get; set; }
             public string tipoDataComemorativa { get; set; }
@@ -36,13 +35,27 @@ namespace UFABC.ES.Presentes.Controllers
             public  string personalidade2 { get; set; }
         }
 
+        public class PresentesDTO
+        {
+            public int id2 { get; set; }
+            public string nome { get; set; }
+            public string descricao { get; set; }
+            public string nomePresenteador { get; set; }
+            public string nomePresenteada { get; set; }
+            public string tipoPresenteado { get; set; }
+            public string relacao { get; set; }
+            public string tipoDataComemorativa { get; set; }
+            public string personalidade1 { get; set; }
+            public string personalidade2 { get; set; }
+            public string url { get; set; }
+        }
+
         public async Task<IActionResult> enviarSolicitacaoAsync(CadastroDTO cadastro)
         {
             var client = new RestClient("http://localhost:8080");
             var request = new RestRequest("api/cadastro", Method.POST);
             request.RequestFormat = DataFormat.Json;
-            request.AddJsonBody(new { nomePresenteador = $@"{cadastro.nomePresenteador}", nomePresenteada = $@"{cadastro.nomePresenteada}",
-                tipoPresenteado = $@"{cadastro.tipoPresenteado}",
+            request.AddJsonBody(new { tipoPresenteado = $@"{cadastro.tipoPresenteado}",
                 relacao = $@"{cadastro.relacao}",
                 tipoDataComemorativa = $@"{cadastro.tipoDataComemorativa}",
                 personalidade1 = $@"{cadastro.personalidade1}",
@@ -61,8 +74,9 @@ namespace UFABC.ES.Presentes.Controllers
             
             client.RemoteCertificateValidationCallback = (sender, certificate, chain, sslPolicyErrors) => true;
             var resposta = await client.ExecuteAsync(request);
+            List<PresentesDTO> deserializedProduct = JsonConvert.DeserializeObject<List<PresentesDTO>>(resposta.Content);
 
-            return Json(resposta.Content);
+            return Json(deserializedProduct);
         }
 
         public IActionResult Privacy()
